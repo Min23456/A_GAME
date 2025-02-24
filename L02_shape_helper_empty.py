@@ -32,6 +32,26 @@ def draw_circle(surface, color,x, y, radius):
 # Function to draw a triangle
 def draw_triangle(surface, color, point1, point2, point3):
     pygame.draw.polygon(surface, color, [point1, point2, point3])
+    
+    
+def draw_everything(surface,color,x,y,width, height):
+    draw_rectangle(surface, color,x,y,width, height)
+    
+    draw_circle(surface, color,x+100, y+100, width)
+    
+    draw_triangle(surface, color, (x-100,y-100), (x-200,y-300),(x+300,y-245))
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
 
 # Main loop
 running = True
@@ -52,6 +72,14 @@ while running:
     
     draw_triangle(screen,light_blue,(600,400),(200,900),(1000,1000))
     
+    
+    
+      
+    draw_everything(screen,black,500,500,600,600)
+      
+      
+      
+      
     
     draw_rectangle(screen,black,0,0,300,300)
 
