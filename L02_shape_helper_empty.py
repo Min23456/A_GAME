@@ -5,7 +5,7 @@ import sys
 pygame.init()
 
 # Screen setup
-WIDTH, HEIGHT = 3000, 1000
+WIDTH, HEIGHT = 1500, 1000
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Shape Drawer")
 
@@ -18,6 +18,8 @@ light_blue = (215, 236, 250)
 organic_green = (126, 173, 110)
 
 organic_orange = (255, 165, 0)
+
+organic_black = (27,22,27)
 
 # Function to draw a rectangle
 def draw_rectangle(surface, color,x,y,width, height):
@@ -39,16 +41,19 @@ while running:
             running = False
     
     screen.fill(white)
-    
-    draw_rectangle(screen,black,0,0,300,300)
+
     
   
     draw_circle(screen,organic_green,100,100,400)
     
     
+    draw_rectangle(screen,organic_black,350,200,500,500)
+    
+    
     draw_triangle(screen,light_blue,(600,400),(200,900),(1000,1000))
     
     
+    draw_rectangle(screen,black,0,0,300,300)
 
     # Update the display
     pygame.display.flip()
